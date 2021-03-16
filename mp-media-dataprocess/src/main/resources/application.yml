@@ -1,0 +1,7 @@
+server:
+  port: 9102
+spring:
+  application:
+    name: media-dataprocess
+  profiles:
+    active: dev
