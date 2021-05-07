@@ -1,0 +1,53 @@
+#Mysql
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://localhost:3306/graphql_test?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=false
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+
+
+nacos:
+  config:
+    server-addr: 192.168.180.3:8848
+  discovery:
+    server-addr: 192.168.180.3:8848
+
+#GraphQL
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+    cors:
+      allowed-origins: http://some.domain.com
+    # if you want to @ExceptionHandler annotation for custom GraphQLErrors
+    exception-handlers-enabled: true
+    contextSetting: PER_REQUEST_WITH_INSTRUMENTATION
+  tools:
+    schema-location-pattern: "**/*.graphqls"
+    # Enable or disable the introspection query. Disabling it puts your server in contravention of the GraphQL
+    # specification and expectations of most clients, so use this option with caution
+
+#GraphiQL Tool
+graphiql:
+  mapping: /graphiql
+  endpoint:
+    graphql: /graphql
+  subscriptions:
+    timeout: 30
+    reconnect: false
+  static:
+    basePath: /
+  enabled: true
+  pageTitle: GraphiQL
+  props:
+    resources:
+      query: /graphql/types.graphqls
+      variables: /graphql/types.graphqls
+    variables:
+      editorTheme: "solarized light"
+  headers:
+    Authorization: "Bearer <your-token>"

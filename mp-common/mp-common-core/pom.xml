@@ -9,7 +9,7 @@
 	<description>公共服务</description>
 
 	<parent>
-		<groupId>com.offcn</groupId>
+		<groupId>com.asl</groupId>
 		<artifactId>mp-common</artifactId>
 		<version>1.0.0</version>
 	</parent>

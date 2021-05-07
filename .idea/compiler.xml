@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mp-graphql-service" />
+        <module name="mp-common-log" />
+        <module name="mp-media-api" />
+        <module name="mp-common-redis" />
+        <module name="mp-media-dataprocess" />
+        <module name="mp-common-core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mp" target="1.8" />
+      <module name="mp-common" target="1.8" />
+      <module name="mp-common-core" target="1.8" />
+      <module name="mp-common-log" target="1.8" />
+      <module name="mp-common-redis" target="1.8" />
+      <module name="mp-graphql-service" target="1.8" />
+      <module name="mp-media-api" target="1.8" />
+      <module name="mp-media-dataprocess" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mp-common-core" options="-parameters" />
+      <module name="mp-common-log" options="-parameters" />
+      <module name="mp-common-redis" options="-parameters" />
+      <module name="mp-graphql-service" options="-parameters" />
+      <module name="mp-media-api" options="-parameters" />
+      <module name="mp-media-dataprocess" options="-parameters" />
+    </option>
+  </component>
+</project>

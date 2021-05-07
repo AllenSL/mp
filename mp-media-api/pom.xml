@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.offcn</groupId>
+		<groupId>com.asl</groupId>
 		<artifactId>mp</artifactId>
 		<version>1.0.0</version>
 	</parent>
 
-	<groupId>com.offcn</groupId>
+	<groupId>com.asl</groupId>
 	<artifactId>mp-media-api</artifactId>
 	<version>1.0.0</version>
 	<name>mp-media-api</name>
@@ -23,6 +23,10 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
@@ -31,23 +35,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.offcn</groupId>
+			<groupId>com.asl</groupId>
 			<artifactId>mp-common-log</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-
-		<!-- 数据库开始-->
-		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>mybatis-plus-generator</artifactId>
-			<version>3.2.0</version>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.18</version>
-		</dependency>
-		<!-- 数据库结束-->
 		<!-- 数据库模板引擎 -->
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
@@ -59,6 +50,51 @@
 					<artifactId>slf4j-api</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- Nacos 组件依赖 -->
+		<dependency>
+			<groupId>com.alibaba.boot</groupId>
+			<artifactId>nacos-config-spring-boot-starter</artifactId>
+			<version>${nacos-config-spring-boot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.boot</groupId>
+			<artifactId>nacos-config-spring-boot-actuator</artifactId>
+			<version>${nacos-config-spring-boot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.boot</groupId>
+			<artifactId>nacos-discovery-spring-boot-starter</artifactId>
+			<version>${nacos-config-spring-boot.version}</version>
+		</dependency>
+		<!-- JDBC -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<!-- MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>${mybatisplus.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>${druid.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-generator</artifactId>
+			<version>${mybatisplus.version}</version>
 		</dependency>
 	</dependencies>
 

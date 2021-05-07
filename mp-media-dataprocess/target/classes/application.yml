@@ -1,7 +1,13 @@
 server:
   port: 9102
+  servlet:
+    context-path: /dataprocess
 spring:
   application:
     name: media-dataprocess
   profiles:
     active: dev
+logging:
+  level:
+    root: INFO
+    org.springframework.data.convert.CustomConversions: ERROR
