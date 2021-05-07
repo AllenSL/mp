@@ -1,7 +1,0 @@
-server:
-  port: 9101
-spring:
-  application:
-    name: media-api
-  profiles:
-    active: dev
